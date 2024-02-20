@@ -14,7 +14,7 @@ The NYT crossword has been published since 1942, and many consider the "modern e
 
 **Figure 1** shows dimensionality reduction via Principal Component Analysis (PCA) of 23 grid, clue and answer-related features obtained from XWord Info. This analysis demonstrates that, while puzzles from a given puzzle day do indeed aggregate with each other in n-dimensional "puzzle property space", the puzzle days themselves nonetheless exist along a continuum. Sunday is well-separated from the other puzzle days in this analysis by PCA1, which undoubtedly incorporates one or more grid size-contingent features.   
 
-**Figure 1. PCA of Select Puzzle Grid, Clue and Answer Features**                                                                  
+**<h4>Figure 1. PCA of Select Puzzle Grid, Clue and Answer Features**                                                                  
 
 ![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/5fa4537f-1f50-4383-ac3a-833620347070)
 *<h5>The first 3 principal components accounted for 47.6% of total variance. All puzzles issued from Jan. 1, 2018- Feb. 19, 2024 were included in this analysis (N=2,241).*
@@ -25,6 +25,15 @@ The overlapping distributions of per puzzle day IS1 solve times across the entir
 **<h4>Figure 2. Distributions of IS1 Solve Times by Puzzle Day for Full Sample Period**                   
 
 ![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/120f724e-3782-47f2-948b-cbaa2f17911e)
+*<h5>All puzzles completed by IS1 in the sample period were included in this analysis (N=1,197).* 
+
+### Key Outcomes from the IS1 EDA
+
+One of the most important findings from the EDA as far as implications for predictive modeling was that IS1 demonstrated marked improvement over the course of the sample period across all puzzle days (**Figure 3**). Coupled to the fact that puzzle day-specific recent past performance was highly positively correlated to performance on the next puzzle both overall (r=.74) and across puzzle days (**Figure 4**), this created an imperative to explore and potentially include different variants of this feature type in the predictive modeling stage.    
+
+**<h4>Figure 3. IS1 Solve Time Overview by Puzzle Day: 10-Puzzle Moving Averages and Distributions of Raw Values**
+
+![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/3366123c-350a-42f8-908d-9a2a79debd97)
 *<h5>All puzzles completed by IS1 in the sample period were included in this analysis (N=1,197).* 
 
 
