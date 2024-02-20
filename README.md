@@ -36,4 +36,10 @@ One of the most important findings from the EDA as far as implications for predi
 ![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/3366123c-350a-42f8-908d-9a2a79debd97)
 *<h5>All puzzles completed by IS1 in the sample period were included in this analysis (N=1,197).* 
 
+**<h4>Figure 4. Puzzle Day-Specific, Recent Performance (RPB) Correlation to IS1 Performance on the Next Puzzle**
+
+![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/1a94caba-53dc-4567-9d1c-ab646bbe00ac)
+*<h5> Puzzle-day specific, recent past performance (x-axis) was calculated over the 8 day-specific puzzles previous to the next solve (y-axis). All puzzles completed from Jan. 1, 2022- Feb. 19, 2024 were included in this analysis (N=967).* 
+
+
 
