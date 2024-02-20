@@ -20,10 +20,11 @@ The NYT crossword has been published since 1942, and many consider the "modern e
 *<h5>The first 3 principal components accounted for 47.6% of total variance. All puzzles issued from Jan. 1, 2018- Feb. 19, 2024 were included in this analysis (N=2,241).*
 ###
 
-The overlapping distributions of per puzzle day IS1 solve times across the entire sample period (**Figure 2**) show a parallel performance phenomenon to the continuum of puzzle properties seen in **Fig. 1**. While solve difficulty increased as the week progressed, puzzle days of adjacent difficulty still had substantially overlapping IS1 solve time distributions. Other than for the "easy" days (Monday and Tuesday), distributions of IS1 solve times were quite broad. Wednesday and Saturday also had somewhat multimodal solve time distributions, supporting the notion that there were "easy" and "hard" puzzle pools/constructors at the level of specific puzzle days. It should be noted, however, that the broadness of each puzzle day-specific IS1 solve time distribution was also increased by the fairly dramatic improvement in IS1 performance over the full sample period. The temporal dynamics of this improvement will be highly evident in the next section's figures.     
+The overlapping distributions of per puzzle day IS1 solve times across the entire sample period (**Figure 2**) show a parallel performance phenomenon to the continuum of puzzle properties seen in **Fig. 1**. While solve difficulty increased as the week progressed, puzzle days of adjacent difficulty still had substantially overlapping IS1 solve time distributions. Other than for the "easy" days (Monday and Tuesday), distributions of IS1 solve times were quite broad. It should be noted, however, that the broadness of each puzzle day-specific IS1 solve time distribution was also increased by the fairly dramatic improvement in IS1 performance over the full sample period. The temporal dynamics of this improvement will be highly evident in the next section's figures.     
 
 **<h4>Figure 2. Distributions of IS1 Solve Times by Puzzle Day for Full Sample Period**                   
 
 ![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/120f724e-3782-47f2-948b-cbaa2f17911e)
 *<h5>All puzzles completed by IS1 in the sample period were included in this analysis (N=1,197).* 
+
 
