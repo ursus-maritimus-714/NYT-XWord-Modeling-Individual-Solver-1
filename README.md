@@ -41,5 +41,7 @@ One of the most important findings from the EDA as far as implications for predi
 ![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/1a94caba-53dc-4567-9d1c-ab646bbe00ac)
 *<h5> Puzzle-day specific, recent past performance (x-axis) was calculated over the 8 day-specific puzzles previous to the next solve (y-axis). All puzzles completed from Jan. 1, 2022- Feb. 19, 2024 were included in this analysis (N=967).* 
 
+###
+Along with the recent performance baseline (RPB) discussed above, multiple features pertaining to the puzzles themselves demonstrated moderately strong or strong correlations with IS1 performance on individual puzzles (**Figure 5**). Two that stood out in particular for their correlational strength with IS1 performance were 'Average Answer Length' and 'Freshness Factor', the latter of which is a proprietary XWord Info measure of the rareness of a given answer in the NYT puzzle. The strengths of these positive correlations with IS1 solve times (for all 15x15 puzzles: r=.56 for both features) can be seen both in the correlation heatmap (A; top row - 5th and 11th columns) as well as in the overall (black) and per-puzzle day (colors) feature correlation scatterplots in panel B. The feature density plots (C) show that the distributions of these features were well-separated across puzzle days. This is an important property for candidate predictive features to have since, as is shown in **Fig. 2**, distribution peaks of solve times for individual puzzle days were themselves well-separated.   
 
 
