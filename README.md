@@ -46,7 +46,7 @@ Along with the recent performance baseline (RPB) discussed above, multiple featu
 
 **<h4>Figure 5. Correlations of Puzzle-Related and Past Performance Features to IS1 Solve Times**
 
-![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/1806a8ec-7417-413b-9004-01049f256e83)
+![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/1aeb9bf0-1ce4-454f-83e4-2626185080ce)
 *<h5> All puzzles completed by IS1 from Jan. 1, 2022- Feb. 19, 2024 were included in this analysis (N=967).*
 
 ## Methods
