@@ -29,7 +29,7 @@ The overlapping distributions of per puzzle day IS1 solve times across the entir
 
 ### Key Outcomes from the IS1 EDA
 
-One of the most important findings from the EDA as far as implications for predictive modeling was that IS1 demonstrated marked improvement over the course of the sample period across all puzzle days (**Figure 3**). Coupled to the fact that puzzle day-specific recent past performance was highly positively correlated to performance on the next puzzle both overall (r=.74) and across puzzle days (**Figure 4**), this created an imperative to explore and potentially include different variants of this feature type in the predictive modeling stage.    
+One of the most important findings from the EDA as far as implications for predictive modeling was that, despite several periods of volatility across puzzle days (e.g., April-May 2023), IS1 demonstrated continual, marked improvement over the course of the sample period across all puzzle days (**Figure 3**). Coupled to the fact that puzzle day-specific recent past performance was highly positively correlated to performance on the next puzzle both overall (r=.74) and across puzzle days (**Figure 4**), this created an imperative to explore and potentially include different variants of this feature type in the predictive modeling stage.    
 
 **<h4>Figure 3. IS1 Solve Time Overview by Puzzle Day: 10-Puzzle Moving Averages and Distributions of Raw Values**
 
@@ -63,6 +63,29 @@ For predictive feature generation, all puzzles completed by IS1 from Aug. 8, 202
 * 'Circadian Features' (n=3) included 'Solve Day Phase', which broke puzzles completion timestamps (obtained per solve via XW Stats) into four 6-hour time slots. Per puzzle being predicted, 'IS_per_sdp_avg_past_diff_from_RPB' was a feature that measured how recent puzzle day-specific performance in the pertinent ‘Solve Day Phase’ compared to RPB across all solve phases. Calculation of this feature used SOS-adjustment (see 'Solver Past Performance Features') in deriving RPB.
 
 * 'Puzzle Day' (n=1) was a class of one, simply assigning a number to the puzzle day of week for a given solve.
+
+**<h4>Figure 6. Overview of Solver Past Performance Features Development, and Predictive Features By Class**
+
+![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/fb48ee5a-3ee3-42af-9a16-59d72bf74ac6)
+
+### Machine Learning Regression Modeling 
+For the modeling phase, puzzles completed in the first solve year (2021) were removed to minimize the potential negative effects of high baseline performance volatility (see EDA linked in Intro and **Fig. 3**). This reduced the overall sample size to N=965. Importantly, as they were generated prior to this filtering, 'Solver Past Performance Features' included in modeling accrued from the beginning of the solve period (August 2021). Additionally, for the main model 21x21 puzzles (Sun) were also removed from the sample. This resulted in a final modeling 15x15 puzzle N=828. The 21x21 puzzles (N=137) were, however, included in by-puzzle-day modeling (see **Figure 8**). 
+
+After predictive features were generated for each puzzle, the best regression model for prediction of the TF (raw GMS solve time, in minutes) was found ('Best Model'). To find 'Best Model', 4 different regression models were explored using [scikitlearn (scikit-learn 1.1.1)](https://scikit-learn.org/stable/auto_examples/release_highlights/plot_release_highlights_1_1_0.html): Linear, Random Forest, Gradient Boosting, and HistGradient Boosting. For evaluation of models including all 15x15 puzzles, an 80/20 training/test split (662/166 puzzles) and 5-fold training set cross-validation were used. Additionally, hyperparameter grid search optimization was used per model as warranted (for ex., for Gradient Boosting the grid search was conducted for imputation type, scaler type, learning rate, maximum depth, maximum features, and subsample proportion used for fitting individual base learners). 'Best Model' (ie, lowest RMSE training error when hyperparameter-optimized) was a Linear Regression model. See the 'Model Metrics' csv files in the 'Reporting' folder for details, including how this model performed relative to the other models). Also, see **Supplementary Figure 1** for some details on the performance of 'Best Model' (ie, Data Quality Assessment, K-best features selection, and Feature Importances).
+
+## Key Modeling Results
+
+**1)** 'Best Model' predicted the TF (raw IS1 solve time, in minutes) more accurately than did a univariate linear model with puzzle day-specific (PDS), mean IS1 solve time *across the entire sample period* as the sole predictive input ('Mean PDS IST'). 'Best Model' also outperformed a variant that simply guessed the mean of the training set TF, *across all 15x15 puzzle days*, for each individual puzzle ('Dummy')(**Figure 7**). The 'Full Model' mean training error of 3.66 minutes, which corresponded to a 33.4% difference from the training set mean across all 15x15 puzzle days. In contrast, the 'Mean PDS IST' and 'Dummy' benchmark models had mean training errors of 3.93 and 5.66 minutes, respectively (corresponding to 35.9% and 51.8% differences from the training set mean). 
+
+**Figure 7. Best Model Prediction Quality vs Benchmark Models**
+
+
+*<h5> 'Best Model' was a Linear Regression Model (K-best features = 23).* 
+
+###
+
+
+
 
 ## Data Supplement
 
