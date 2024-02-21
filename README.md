@@ -79,8 +79,8 @@ After predictive features were generated for each puzzle, the best regression mo
 
 **Figure 7. Best Model Prediction Quality vs Benchmark Models**
 
-
-*<h5> 'Best Model' was a Linear Regression Model (K-best features = 23).* 
+![image](https://github.com/ursus-maritimus-714/NYT-XWord-Modeling-Individual-Solver-1/assets/90933302/5d88681a-abbe-4ab0-b30a-87d1df7c7ad1)
+*<h5> 'Best Model' was a Linear Regression Model (K-best features = 7).* 
 
 ###
 
