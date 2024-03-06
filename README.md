@@ -75,7 +75,7 @@ After predictive features were generated for each puzzle, the best regression mo
 
 ## Key Modeling Results
 
-**1)** 'Best Model' predicted the TF (raw IS1 solve time, in minutes) more accurately than did a univariate linear model with puzzle day-specific (PDS), mean IS1 solve time *across the entire sample period* as the sole predictive input ('Mean PDS IST'). 'Best Model' also outperformed a variant that simply guessed the mean of the training set TF, *across all 15x15 puzzle days*, for each individual puzzle ('Dummy')(**Figure 7**). The 'Full Model' mean training error of 3.66 minutes, which corresponded to a 33.4% difference from the training set mean across all 15x15 puzzle days. In contrast, the 'Mean PDS IST' and 'Dummy' benchmark models had mean training errors of 3.93 and 5.66 minutes, respectively (corresponding to 35.9% and 51.8% differences from the training set mean). 
+**1)** 'Best Model' predicted the TF (raw IS1 solve time, in minutes) more accurately (by 7%) than did a univariate linear model with puzzle day-specific (PDS) mean IS1 solve time *across the entire sample period* as the sole predictive input ('Mean PDS IST'). 'Best Model' also outperformed (by 35.5%) a variant that simply guessed the mean of the training set TF *across all 15x15 puzzle days* for each individual puzzle ('Dummy')(**Figure 7**). The 'Best Model' had a mean training error of 3.66 minutes, which corresponded to a 33.4% difference from the training set mean across all 15x15 puzzle days. In contrast, the 'Mean PDS IST' and 'Dummy' benchmark models had mean training errors of 3.93 and 5.66 minutes, respectively (corresponding to 35.9% and 51.8% differences from the training set mean). 
 
 **<h4>Figure 7. Best Model Prediction Quality vs Benchmark Models**
 
